@@ -2,12 +2,16 @@ const express = require('express');
 const cors = require('cors');
 const session = require('express-session');
 const path = require('path');
+const dotenv =require('dotenv');
 
 const conn = require("./services/connect");
 const bodyParser = require('body-parser');
 
 const info = require('./apis/gatewayApi');
 // const permitApi = require('./apis/permitApi');
+
+dotenv.config({path : './config.env' });
+const PORT = process.env.PORT || 7000;
 
 const app = express();
 
@@ -184,6 +188,6 @@ app.post("/", (req, resp)=>{
    });
 
 
-app.listen(7000, ()=>{
-    console.log("Server listening port no. 7000");
+app.listen(PORT, ()=>{
+    console.log(`Server listening port ${PORT}`);
 })
