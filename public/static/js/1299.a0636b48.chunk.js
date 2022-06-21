@@ -1,1 +1,0 @@
-(self.webpackChunk_coreui_coreui_free_react_admin_template=self.webpackChunk_coreui_coreui_free_react_admin_template||[]).push([[1299],{1299:function(){}}]);
