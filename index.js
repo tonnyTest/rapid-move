@@ -30,7 +30,7 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'static')));
 
-app.use(express.static(path.join(__dirname + "/public")));
+// app.use(express.static(path.join(__dirname + "/public")));
 
 
 // admin login
@@ -190,6 +190,10 @@ app.post("/", (req, resp)=>{
 	);
    });
 
+
+if(process.env.Node_ENV == "production"){
+	app.use(express.static("client/build"));
+}
 
 app.listen(PORT, ()=>{
     console.log(`Server listening port ${PORT}`);
