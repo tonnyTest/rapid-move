@@ -1,10 +1,10 @@
 const mysql = require('mysql');
 
 const conn = mysql.createConnection({
-    host: "sql206.epizy.com",
-    user: "epiz_32003202",
-    password: "Z7MDmbL6yQR",
-    database: "epiz_32003202_rapidmoveDB",
+    host: "localhost",
+    user: "parkingrapid_rapidmoveDB",
+    password: "Server@786",
+    database: "parkingrapid_rapidmoveDB",
    });
    
    conn.connect(function(error){
