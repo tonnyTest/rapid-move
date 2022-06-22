@@ -6,12 +6,12 @@ const conn = mysql.createConnection({
     // password: "Server@786",
     // database: "parkingrapid_rapidmoveDB",
     host: "us-cdbr-east-05.cleardb.net",
-    user: "b1db846b652ca4",
-    password: "7311b9fe",
-    database: "heroku_76a113fe11817a7",
+    user: "b7432d80d63e61",
+    password: "e70ae397",
+    database: "heroku_3e7b53fcd8b9375",
    });
    
-  //  mysql://b1db846b652ca4:7311b9fe@us-cdbr-east-05.cleardb.net/heroku_76a113fe11817a7?reconnect=true
+   
 
    conn.connect(function(error){
     if(!!error){
