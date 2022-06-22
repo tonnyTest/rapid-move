@@ -28,9 +28,9 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
-app.use(express.static(path.join(__dirname, 'static')));
+// app.use(express.static(path.join(__dirname, 'static')));
 
-// app.use(express.static(path.join(__dirname + "/public")));
+app.use(express.static(path.join(__dirname + "/public")));
 
 
 // admin login
@@ -122,24 +122,10 @@ app.get("/gateway", (req, resp)=>{
     //    const result =  req.body;
 	   console.log(info);
 	   resp.send(info);
-	}catch(error){
+	}catch(error)
+	{
     resp.send("error");
 	}
-
-
-
-	// conn.query(
-	// 	`INSERT INTO test("frame_type, site_id, gateway_id, display_data, occupancy) VALUES(?,?,?,?,?)`,
-	// 	[frame_type, site_id, gateway_id, display_data, occupancy],
-	// 	function (err, data, fields) {
-	// 	if (err) return next(new AppError(err, 500));
-	// 	res.status(200).json({
-	// 		status: "success",
-	// 		length: data?.length,
-	// 		data: data,
-	// 	});
-	// 	}
-	// );
 })
 
 
